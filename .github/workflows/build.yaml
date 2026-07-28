@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository with Submodules
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -27,20 +27,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      # Run your script to fetch or build the native binaries
-      # Replace this line with whichever script exists in your repo (e.g., ./external-libs/download.sh)
-      - name: Prepare External Libraries
-        run: |
-          if [ -f "./external-libs/download.sh" ]; then
-            chmod +x ./external-libs/download.sh
-            ./external-libs/download.sh
-          elif [ -f "./scripts/setup.sh" ]; then
-            chmod +x ./scripts/setup.sh
-            ./scripts/setup.sh
-          fi
-
       - name: Build Release APK
-        run: gradle :app:assembleUniversalGmsRelease || gradle :app:assembleRelease
+        run: gradle :app:assembleRelease
 
       - name: Upload Release APK
         uses: actions/upload-artifact@v4
