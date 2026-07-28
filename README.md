@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 BChat
 ======
 BChat is a decentralized p2p messaging app that runs on Beldex network. Unlike other centralized messaging apps BChat never collect any user data like phone number, location, email, IP address.. etc. The message you sent using BChat will be highly secure and anonymous. No one (even us) can have control of your data that has been shared in BChat. Wtih BChat you own your data.
@@ -54,3 +55,6 @@ Credits
 - Portions Copyright (c) 2013-2017 Open Whisper Systems
 - Portions Copyright (c) 2018-2021 Session 
 
+=======
+# OnyxChat
+>>>>>>> 7a4ae9e81d7ae3fb7ac8b99cccf33629f222486f
